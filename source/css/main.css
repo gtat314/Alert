@@ -1,0 +1,92 @@
+/*
+	@modCssClasses
+	@customTag: alert-mod
+	--theme-modal-backdropFilter 			blur(2px)
+	--theme-modal-backgroundColor 			rgba(17, 17, 17, 1)
+	--theme-modal-boxShadow 				rgba(0, 0, 0, 1)
+	--theme-modalText-color 				rgba(255, 255, 255, 1)
+	--theme-modalButton-backgroundColor 	rgba(68, 68, 255, 1)
+	--theme-transitionDuration 				0.15s
+*/
+
+
+
+
+alert-mod {
+	position: fixed;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+	right: 0;
+	z-index: 50;
+	display: flex;
+	backdrop-filter: var(--theme-modal-backdropFilter, blur(1rem));
+}
+
+alert-mod .content {
+	width: 30rem;
+	background-color: var(--theme-modal-backgroundColor, rgba(17, 17, 17, 1));
+	padding-top: 2rem;
+	padding-right: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 2rem;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+	box-shadow: 0 0 1rem var(--theme-modal-boxShadow, rgba(0, 0, 0, 1));
+	max-width: 95%;
+}
+
+alert-mod .content p {
+	color: var(--theme-modalText-color, rgba(255, 255, 255, 1));
+	font-size: 0.9rem;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 3rem;
+	margin-left: 0;
+}
+
+alert-mod .content .buttons {
+	display: flex;
+	justify-content: flex-end;
+}
+
+alert-mod .content .buttons button {
+	background-color: var(--theme-modalButton-backgroundColor, rgba(68, 68, 255, 1));
+	font-size: 1rem;
+	font-weight: 900;
+	line-height: 3rem;
+	padding-top: 0;
+	padding-right: 1rem;
+	padding-bottom: 0;
+	padding-left: 1rem;
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+	transition-property: opacity;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	min-width: 4rem;
+	color: var(--theme-modalButton-color, rgba(255, 255, 255, 1));
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+alert-mod .content .buttons button:hover {
+	opacity: 1;
+}
+
+
+
+
+@media only screen and (max-device-width: 680px) {
+
+    alert-mod {
+        height: 100%;
+    }
+
+}
