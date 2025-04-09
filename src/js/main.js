@@ -39,6 +39,13 @@ function Alert( text ) {
      * @private
      */
     this._okElem = null;
+
+    /**
+     * 
+     * @property
+     * @private
+     */
+    this._onClickCallback = null;
     
     /**
      * 
@@ -102,7 +109,22 @@ Alert.prototype._destroy = function() {
     this._alertElem.remove();
     this._alertElem = null;
 
+    if ( this._onClickCallback !== null ) {
+
+        this._onClickCallback();
+
+    }
+
 };
+
+Alert.prototype.onClickOk = function( callback ) {
+
+    this._onClickCallback = callback;
+
+};
+
+
+
 
 /**
  * 
