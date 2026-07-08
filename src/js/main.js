@@ -1,27 +1,5 @@
 /**
  * 
- * @employSchema
- * @eventListeners
- * @sensibleDefaults
- * @svgSrc
- * @documentation
- * @iconUniformNames
- * @propertify
- * @objectifyEventListeners
- * @documentationApi
- * @distinctEventListeners
- * @minimizeProperties
- * @parentElementSelector
- * @propertiesElemUnderscore
- * @methodNamingConventions
- * @propertyNamingConventions
- */
-
-
-
-
-/**
- * 
  * @param {HTMLSourceElement} text
  */
 function Alert( text ) {
