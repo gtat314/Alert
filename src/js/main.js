@@ -68,9 +68,28 @@ function Alert( text ) {
 
 };
 
+
+
+
 /**
- * 
+ * @method
+ * @public
+ * @param {CallableFunction} callback 
+ * @returns {void}
+ */
+Alert.prototype.onClickOk = function( callback ) {
+
+    this._onClickCallback = callback;
+
+};
+
+
+
+
+/**
+ * @method
  * @private
+ * @returns {void}
  */
 Alert.prototype._destroy = function() {
 
@@ -95,19 +114,11 @@ Alert.prototype._destroy = function() {
 
 };
 
-Alert.prototype.onClickOk = function( callback ) {
-
-    this._onClickCallback = callback;
-
-};
-
-
-
-
 /**
- * 
+ * @method
  * @private
  * @param {Event} evt 
+ * @returns {void}
  */
 Alert.prototype._evt_keypress = function( evt ) {
 
